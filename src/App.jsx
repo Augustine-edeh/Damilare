@@ -16,50 +16,39 @@ function App() {
       <motion.p
         initial={{ x: -1000, opacity: 0 }}
         animate={{ x: 0, y: 20, opacity: 1 }}
-        transition={{ ease: "easeOut", duration: 2 }}
+        transition={{ ease: "easeOut", duration: 1.5, delay: 1 }}
         className="text-right"
       >
         ...Welcome to my portfolio webpage
       </motion.p>
 
       <motion.div
-        className="fixed bottom-0 right-0 left-0 mb-5 text-center text-green-500"
-        initial={{ y: -10 }}
-        animate={{ y: 10 }}
+        className=""
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{
-          repeat: Infinity,
-          repeatType: "reverse",
+          // repeat: Infinity,
+          // repeatType: "reverse",
           duration: 2,
+          delay: 1.7,
           ease: "easeInOut",
         }}
       >
-        🛠️This Portfolio page is still under development.
+        <motion.div
+          className="fixed bottom-0 right-0 left-0 mb-5 text-center text-green-500"
+          initial={{ y: -10 }}
+          animate={{ y: 10 }}
+          transition={{
+            repeat: Infinity,
+            repeatType: "reverse",
+            duration: 2,
+            delay: 1.7,
+            ease: "easeInOut",
+          }}
+        >
+          🚧 This Project is still under development. 🛠️
+        </motion.div>
       </motion.div>
-
-      {/* <motion.div
-        initial={{ y: -10 }}
-        animate={{ y: 10 }}
-        transition={{
-          repeat: Infinity,
-          repeatType: "reverse",
-          duration: 2,
-          ease: "easeInOut",
-        }}
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          backgroundColor: "#3498db",
-          padding: "20px",
-          borderRadius: "8px",
-          color: "#fff",
-          textAlign: "center",
-          fontSize: "18px",
-        }}
-      >
-        This portfolio page is still under development
-      </motion.div> */}
     </div>
   );
 }
