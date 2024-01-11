@@ -46,7 +46,7 @@ function App() {
             ease: "easeInOut",
           }}
         >
-          🚧 This Project is still under development. 🛠️
+          🚧 Project under development. 🛠️
         </motion.div>
       </motion.div>
     </div>
