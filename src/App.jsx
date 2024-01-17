@@ -19,7 +19,7 @@ function App() {
               className="bg-gray-400 w-fit rounded-full p-2"
             >
               <motion.img
-                src="/src/images/Damilare with Mic.png"
+                src={"https://ibb.co/gg35tN6"}
                 alt="profile image"
                 initial={{ x: -1000, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -43,7 +43,7 @@ function App() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ ease: "easeOut", duration: 1 }}
           >
-            Hi there 👋,
+            Hi there! 👋,
           </motion.h2>
           <p className="text-xl line leading-relaxed">I'm</p>
           <h1 className="text-[3rem] text-center">Oluwadamilare Adamolekun</h1>
