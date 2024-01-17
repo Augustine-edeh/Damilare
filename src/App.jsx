@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 function App() {
+  const profileImgLink = "https://i.ibb.co/x5DpzW3/Damilare-with-Mic.png";
   return (
     <div className="h-screen  text-white px-4">
       <div className=" flex flex-col lg:flex-row justify-center gap-10 h-full pb-10 px-5">
@@ -19,7 +20,7 @@ function App() {
               className="bg-gray-400 w-fit rounded-full p-2"
             >
               <motion.img
-                src={"https://ibb.co/gg35tN6"}
+                src={profileImgLink}
                 alt="profile image"
                 initial={{ x: -1000, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
