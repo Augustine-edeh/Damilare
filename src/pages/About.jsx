@@ -1,5 +1,4 @@
-import React from "react";
-
+import Card from "../Card";
 function AboutPage() {
   return (
     <div className="bg-gray-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
@@ -10,7 +9,7 @@ function AboutPage() {
         <h2 className="text-lg text-center text-gray-800 mb-5">
           Meet Oluwadamilare!
         </h2>
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <Card>
           <div className="text-lg text-gray-700">
             <p>Hi, I'm Oluwadamilare Adamolekun, but you can call me Dammy!</p>
             <p className="mt-4">
@@ -22,8 +21,8 @@ function AboutPage() {
               Foundation School, you'll find me embarking on epic adventures!
             </p>
           </div>
-        </div>
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        </Card>
+        <Card>
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
             What I Love Doing
           </h2>
@@ -42,8 +41,8 @@ function AboutPage() {
               online, you can bet I'm always up to something exciting!
             </p>
           </div>
-        </div>
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        </Card>
+        <Card>
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
             Fun Facts About Me
           </h2>
@@ -61,8 +60,8 @@ function AboutPage() {
               record time – my brain is faster than a speeding bullet!
             </li>
           </ul>
-        </div>
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+        </Card>
+        <Card>
           <p className="text-lg text-gray-700">
             "Life is like a video game – full of challenges, adventures, and
             endless possibilities. Let's press start and see where the journey
@@ -71,7 +70,7 @@ function AboutPage() {
           <p className="text-right text-gray-800 mt-4">
             - Oluwadamilare Adamolekun
           </p>
-        </div>
+        </Card>
       </div>
     </div>
   );
