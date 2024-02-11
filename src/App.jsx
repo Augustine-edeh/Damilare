@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import About from "./pages/About";
 function App() {
   const profileImgLink = "https://i.ibb.co/x5DpzW3/Damilare-with-Mic.png";
   return (
@@ -22,6 +22,7 @@ function App() {
               <motion.img
                 src={profileImgLink}
                 alt="profile image"
+                loading="lazy"
                 initial={{ x: -1000, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{
@@ -89,6 +90,7 @@ function App() {
           🚧 Project under development. 🛠️
         </motion.div>
       </motion.div>
+      <About />
     </div>
   );
 }
