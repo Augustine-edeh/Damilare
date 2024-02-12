@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
         <p className="mt-4 text-sm text-center">
           &copy; {new Date().getFullYear()} Oluwadamilare Adamolekun. All rights
-          reserved. | Created by{" "}
+          reserved. | Developed by{" "}
           <a
             href="https://github.com/Augustine-edeh"
             target="_blank"

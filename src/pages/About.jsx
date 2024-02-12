@@ -4,9 +4,12 @@ const AboutPage = () => {
   return (
     <div className="bg-gray-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
-          Meet Oluwadamilare Adamolekun!
+        <h1 className="text-4xl font-bold text-center text-gray-800 mb-4">
+          About Me
         </h1>
+        <h6 className="text-lg text-center text-gray-800 mb-8">
+          Meet Oluwadamilare Adamolekun!
+        </h6>
         <Card>
           <div className="text-lg text-gray-700">
             <p>
@@ -71,7 +74,7 @@ const AboutPage = () => {
               adventures! So stay tuned for the next chapter in my journey – who
               knows what I'll dream up next?
               <Paragraph>
-                And like the popular saying amongst gamer like myself; "Life is
+                And like the popular saying amongst gamers like myself; "Life is
                 like a video game – full of challenges, adventures, and endless
                 possibilities. Let's press start and see where the journey takes
                 us!💪"
