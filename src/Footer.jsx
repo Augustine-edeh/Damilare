@@ -46,6 +46,8 @@ const Footer = () => {
           reserved. | Created by{" "}
           <a
             href="https://github.com/Augustine-edeh"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-blue-500 hover:text-blue-600 transition duration-300"
           >
             Augustine
