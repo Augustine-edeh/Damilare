@@ -60,34 +60,6 @@ const HeroSection = () => {
           </motion.p>
         </section>
       </div>
-
-      <motion.div
-        className=""
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          // repeat: Infinity,
-          // repeatType: "reverse",
-          duration: 2,
-          delay: 1.7,
-          ease: "easeInOut",
-        }}
-      >
-        <motion.div
-          className="fixed bottom-0 right-0 left-0 mb-5 text-center text-green-500"
-          initial={{ y: -10 }}
-          animate={{ y: 10 }}
-          transition={{
-            repeat: Infinity,
-            repeatType: "reverse",
-            duration: 2,
-            delay: 1.7,
-            ease: "easeInOut",
-          }}
-        >
-          🚧 Project under development. 🛠️
-        </motion.div>
-      </motion.div>
     </>
   );
 };

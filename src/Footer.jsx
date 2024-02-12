@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-6">
+    <footer className="bg-gray-800 text-white pt-6 pb-16">
       <div className="max-w-3xl mx-auto flex flex-col items-center justify-center">
         <p className="text-lg mb-4">Stay Connected</p>
         <div className="flex space-x-4">
@@ -41,7 +41,7 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <p className="mt-4 text-sm">
+        <p className="mt-4 text-sm text-center">
           &copy; {new Date().getFullYear()} Oluwadamilare Adamolekun. All rights
           reserved. | Created by{" "}
           <a
