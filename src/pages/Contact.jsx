@@ -1,3 +1,5 @@
+import Card from "../Card";
+
 const Contact = () => {
   const submitHandler = (e) => {
     e.preventDefault();
@@ -11,7 +13,7 @@ const Contact = () => {
         <h1 className="text-lg font-bold text-center text-gray-800 mb-8">
           (Drop me a line and I'll be sure to holla right back at you soon. 😉)
         </h1>
-        <div className="bg-white rounded-lg shadow-lg p-6">
+        <Card>
           <form onSubmit={submitHandler}>
             <div className="mb-4">
               <label
@@ -64,7 +66,7 @@ const Contact = () => {
               </button>
             </div>
           </form>
-        </div>
+        </Card>
       </div>
     </div>
   );
