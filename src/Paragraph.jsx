@@ -1,5 +1,5 @@
 const Paragraph = ({ children }) => {
-  return <p className="mt-4">{children}</p>;
+  return <div className="mt-4">{children}</div>;
 };
 
 export default Paragraph;
