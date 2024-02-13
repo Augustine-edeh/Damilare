@@ -5,7 +5,10 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gray-800 flex flex-col lg:flex-row justify-center gap-10 h-full pb-10 px-5">
+      <div
+        id="home"
+        className="min-h-screen bg-gray-800 flex flex-col lg:flex-row justify-center gap-10 h-full pb-10 px-5"
+      >
         <section className="flex place-content-center ">
           <div className="w-fit h-fit rounded-full p-2 my-auto">
             <motion.div
