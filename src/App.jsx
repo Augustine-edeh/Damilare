@@ -6,7 +6,7 @@ import ConstructionNote from "./ConstructionNote";
 
 function App() {
   return (
-    <div className="text-white">
+    <div className="">
       <Hero />
       <About />
       <Contact />
