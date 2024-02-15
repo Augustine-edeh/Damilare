@@ -1,21 +1,23 @@
+import { useState } from "react";
 import Card from "../Card";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// function App() {
-//   const notify = () => toast("Wow so easy !");
-
-//   return (
-//     <div>
-//       <button onClick={notify}>Notify !</button>
-//       <ToastContainer />
-//     </div>
-//   );
-// }
-
 const Contact = () => {
+  let [formInputsValues, setFormInputsValues] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const changeHandler = (e) => {
+    setFormInputsValues(e.target.value);
+    console.log(e.target.value);
+  };
+
   const submitHandler = (e) => {
     toast("Message sent succcessfully!");
+    setFormInputsValues({ name: "", email: "", message: "" });
 
     e.preventDefault();
   };
@@ -44,6 +46,8 @@ const Contact = () => {
               <input
                 type="text"
                 id="name"
+                value={formInputsValues.name}
+                onChange={changeHandler}
                 required
                 className="w-full border text-black border-gray-300 rounded-md p-3 focus:bg-indigo-50 focus:outline-none focus:border-blue-500 transition duration-300"
               />
@@ -58,6 +62,8 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
+                value={formInputsValues.email}
+                onChange={changeHandler}
                 required
                 className="w-full border text-black border-gray-300 rounded-md p-3 focus:bg-indigo-50 focus:outline-none focus:border-blue-500 transition duration-300"
               />
@@ -71,6 +77,8 @@ const Contact = () => {
               </label>
               <textarea
                 id="message"
+                value={formInputsValues.message}
+                onChange={changeHandler}
                 rows="4"
                 required
                 className="w-full border text-black border-gray-300 rounded-md p-3 focus:bg-indigo-50 focus:outline-none focus:border-blue-500 transition duration-300"
