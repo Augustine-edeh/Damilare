@@ -1,5 +1,5 @@
-import Card from "../Card";
-import Paragraph from "../Paragraph";
+import Card from "../ui/Card";
+import Paragraph from "../ui/Paragraph";
 const AboutPage = () => {
   return (
     <div
