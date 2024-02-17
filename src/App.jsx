@@ -1,20 +1,21 @@
-import Hero from "./pages/Hero";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Footer from "./Footer";
-import ConstructionNote from "./ConstructionNote";
+import NavBar from "./components/ui/navigation/NavBar";
+import Hero from "./components/pages/Hero";
+import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
+import Footer from "./components/ui/Footer";
+import ConstructionNote from "./components/ui/ConstructionNote";
 
-function App() {
+const App = () => {
   return (
-    <div className="text-white">
+    <>
+      <NavBar />
       <Hero />
       <About />
       <Contact />
       <Footer />
       <ConstructionNote />
-    </div>
+    </>
   );
-}
+};
 
 export default App;
-Contact;

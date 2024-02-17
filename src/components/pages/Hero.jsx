@@ -7,7 +7,7 @@ const HeroSection = () => {
     <>
       <div
         id="home"
-        className="min-h-screen bg-gray-800 flex flex-col lg:flex-row justify-center gap-10 h-full pb-10 px-5"
+        className="min-h-screen bg-gray-800 flex flex-col lg:flex-row justify-center gap-10 h-full pb-10 px-5 text-white"
       >
         <section className="flex place-content-center ">
           <div className="w-fit h-fit rounded-full p-2 my-auto">
