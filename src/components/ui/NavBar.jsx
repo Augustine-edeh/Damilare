@@ -9,13 +9,13 @@ const NavBar = () => {
   return (
     <>
       {/* Desktop menu */}
-      <nav className="hidden md:flex items-center justify-around h-[17vh]">
+      <nav className="hidden md:flex items-center justify-around h-20">
         <p className="text-3xl cursor-default">Damilare</p>
         <ul className="flex gap-8 text-2xl">
           <li>
             <a
               href="#home"
-              className="text-black hover:text-gray-400 hover:underline underline-offset-8 decoration-[rgb(181,181,181)] decoration-2"
+              className="text-black hover:text-gray-400 hover:underline underline-offset-8 decoration-black decoration-2"
             >
               Home
             </a>
@@ -38,25 +38,25 @@ const NavBar = () => {
       </nav>
 
       {/* Hamburger menu */}
-      <nav className="flex md:hidden items-center justify-around h-[17vh]">
+      <nav className="flex md:hidden items-center justify-around h-20">
         <p className="text-3xl cursor-default">Damilare</p>
 
         <div className="relative inline-block">
           <div
-            className="hamburger-icon flex flex-col justify-between h-[24px] w-[30px] cursor-pointer"
+            className="hamburger-icon flex flex-col justify-between h-6 w-8 cursor-pointer"
             onClick={toggleMenu}
           >
-            <span className="w-full h-[2px] bg-black transition-all ease-in-out duration-1000"></span>
-            <span className="w-full h-[2px] bg-black transition-all ease-in-out duration-1000"></span>
-            <span className="w-full h-[2px] bg-black transition-all ease-in-out duration-1000"></span>
+            <span className="w-full h-0.5 bg-black transition-all"></span>
+            <span className="w-full h-0.5 bg-black transition-all"></span>
+            <span className="w-full h-0.5 bg-black transition-all"></span>
           </div>
 
           <div>
-            <ul className="menu-links flex flex-col gap-8 text-2xl absolute top-full right-0 bg-white w-fit max-h-0 overflow-hidden transition-all ease-in-out duration-1000">
+            <ul className="menu-links bg-white flex flex-col gap-5 text-2xl absolute top-full right-0 w-fit max-h-0 overflow-hidden transition-all">
               <li>
                 <a
                   href="#home"
-                  className="text-black hover:text-gray-400 hover:underline underline-offset-8 decoration-black decoration-2 block p-[10px] text-center text-2xl text-black no-underline transition-all ease-in-out duration-1000"
+                  className="text-black text-2xl hover:text-gray-400 hover:underline underline-offset-8 decoration-black decoration-1 block p-2.5 text-center transition-all"
                   onClick={toggleMenu}
                 >
                   Home
@@ -64,7 +64,7 @@ const NavBar = () => {
               </li>
               <a
                 href="#about"
-                className="text-black hover:text-gray-400 hover:underline underline-offset-8 decoration-black decoration-2 block p-[10px] text-center text-2xl text-black no-underline transition-all ease-in-out duration-1000"
+                className="text-black text-2xl hover:text-gray-400 hover:underline underline-offset-8 decoration-black decoration-1 block p-2.5 text-center transition-all"
                 onClick={toggleMenu}
               >
                 About
@@ -72,7 +72,7 @@ const NavBar = () => {
               <li>
                 <a
                   href="#contact"
-                  className="text-black hover:text-gray-400 hover:underline underline-offset-8 decoration-black decoration-2 block p-[10px] text-center text-2xl text-black no-underline transition-all ease-in-out duration-1000"
+                  className="text-black text-2xl hover:text-gray-400 hover:underline underline-offset-8 decoration-black decoration-1 block p-2.5 text-center transition-all"
                   onClick={toggleMenu}
                 >
                   Contact
