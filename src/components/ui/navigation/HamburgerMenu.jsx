@@ -7,7 +7,7 @@ const HamburgerMenu = () => {
   };
 
   return (
-    <nav className="flex md:hidden items-center justify-around h-20 text-blue-100 mix-blend-difference font-semibold fixed w-full z-20 bg-transparent backdrop-blur-[6px] shadow-lg border-teal-400 border-b-2">
+    <nav className="flex md:hidden items-center justify-around h-20 text-blue-100 mix-blend-difference font-semibold fixed w-full z-20 bg-transparent backdrop-blur-[6px] shadow-lg">
       <p className="text-3xl cursor-default">Portfolio</p>
 
       <div className="relative inline-block mix-blend-normal">
