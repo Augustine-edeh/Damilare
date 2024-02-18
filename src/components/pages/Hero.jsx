@@ -15,8 +15,6 @@ const HeroSection = () => {
               initial={{ x: -1000, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{
-                // repeat: Infinity,
-                // repeatType: "reverse",
                 duration: 2,
                 delay: 1.4,
                 ease: "easeInOut",
@@ -30,8 +28,6 @@ const HeroSection = () => {
                 initial={{ x: -1000, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{
-                  // repeat: Infinity,
-                  // repeatType: "reverse",
                   duration: 2,
                   delay: 1.4,
                   ease: "easeInOut",

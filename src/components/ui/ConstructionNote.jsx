@@ -7,8 +7,6 @@ const ConstructionNote = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{
-        // repeat: Infinity,
-        // repeatType: "reverse",
         duration: 2,
         delay: 1.7,
         ease: "easeInOut",

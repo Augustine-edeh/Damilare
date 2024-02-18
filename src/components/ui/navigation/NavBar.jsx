@@ -3,7 +3,7 @@ import HamburgerMenu from "./HamburgerMenu";
 
 const NavBar = () => {
   return (
-    <header className="">
+    <header>
       <DesktopMenu />
       <HamburgerMenu />
     </header>
