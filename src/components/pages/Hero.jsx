@@ -21,7 +21,7 @@ const HeroSection = () => {
                 delay: 1.4,
                 ease: "easeInOut",
               }}
-              className="bg-gray-400 w-fit rounded-full p-2"
+              className="bg-gray-400 w-fit rounded-full p-2 shadow-lg"
             >
               <motion.img
                 src={profileImgLink}
@@ -36,7 +36,7 @@ const HeroSection = () => {
                   delay: 1.4,
                   ease: "easeInOut",
                 }}
-                className="h-64 rounded-full z-0"
+                className="h-64 rounded-full z-0 shadow-2xl"
               />
             </motion.div>
           </div>
