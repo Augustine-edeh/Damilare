@@ -40,3 +40,8 @@ html {
 .hamburger-icon span:first-child {
   transform: none;
 }
+
+.blur-backdrop-filter {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}

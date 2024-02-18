@@ -7,7 +7,7 @@ const HeroSection = () => {
     <>
       <div
         id="home"
-        className="min-h-screen bg-gray-800 flex flex-col lg:flex-row justify-center gap-10 h-full pb-10 px-5 text-white"
+        className="min-h-screen bg-gray-800 flex flex-col lg:flex-row justify-center gap-10 h-full pb-10 px-5 text-blue-100"
       >
         <section className="flex place-content-center ">
           <div className="w-fit h-fit rounded-full p-2 my-auto">
@@ -15,13 +15,11 @@ const HeroSection = () => {
               initial={{ x: -1000, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{
-                // repeat: Infinity,
-                // repeatType: "reverse",
                 duration: 2,
                 delay: 1.4,
                 ease: "easeInOut",
               }}
-              className="bg-gray-400 w-fit rounded-full p-2"
+              className="bg-gray-400 w-fit rounded-full p-2 shadow-lg"
             >
               <motion.img
                 src={profileImgLink}
@@ -30,13 +28,11 @@ const HeroSection = () => {
                 initial={{ x: -1000, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{
-                  // repeat: Infinity,
-                  // repeatType: "reverse",
                   duration: 2,
                   delay: 1.4,
                   ease: "easeInOut",
                 }}
-                className="h-64 rounded-full z-0"
+                className="h-64 rounded-full z-0 shadow-2xl"
               />
             </motion.div>
           </div>
