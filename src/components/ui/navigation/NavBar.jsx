@@ -1,12 +1,12 @@
-import DesktopMenu from "./DesktopMenu";
-import HamburgerMenu from "./HamburgerMenu";
+import DesktopNav from "./DesktopNav";
+import MobileNav from "./MobileNav";
 
 const NavBar = () => {
   return (
-    <header>
-      <DesktopMenu />
-      <HamburgerMenu />
-    </header>
+    <>
+      <DesktopNav />
+      <MobileNav />
+    </>
   );
 };
 

@@ -20,7 +20,7 @@ const AboutPage = () => {
               Dammy!
             </p>
             <Paragraph>
-              I'm a 6-year-old dynamo hailing from the bustling city of Lagos,
+              I'm a 7-year-old dynamo hailing from the bustling city of Lagos,
               Nigeria.
             </Paragraph>
             <Paragraph>
