@@ -7,7 +7,7 @@ const Footer = () => {
           <a
             href="#home"
             title="Home"
-            className="text-blue-300 hover:text-blue-400 transition duration-300"
+            className="text-blue-300 hover:text-blue-400 hover:rotate-12 transition duration-100"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@ const Footer = () => {
           <a
             href="#about"
             title="About me"
-            className="text-blue-300 hover:text-blue-400 transition duration-300"
+            className="text-blue-300 hover:text-blue-400 hover:-rotate-12 transition duration-100"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ const Footer = () => {
           <a
             href="#contact"
             title="Contact me"
-            className="text-blue-300 hover:text-blue-400 transition duration-300"
+            className="text-blue-300 hover:text-blue-400 hover:-rotate-12 transition duration-100"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
