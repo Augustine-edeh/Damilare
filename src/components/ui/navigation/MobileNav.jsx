@@ -1,26 +1,17 @@
-import { useHotkeys } from "react-hotkeys-hook";
 const MobileNav = () => {
-  const hotKeys = useHotkeys();
   const toggleMenu = () => {
     const $menu = document.querySelector(".menu-links");
     const $icon = document.querySelector(".hamburger-icon");
     $menu.classList.toggle("open");
     $icon.classList.toggle("open");
-    // console.log($menu.classList.contains("open"));
 
     document.addEventListener("keydown", (e) => {
       if (e.code === "Escape" && $menu.classList.contains("open")) {
-        // console.log("Yesss!");
-
         $menu.classList.toggle("open");
         $icon.classList.toggle("open");
       }
     });
   };
-
-  // if ($menu.classList.contains("open")) {
-  //   console.log(`open!!!`);
-  // }
 
   return (
     <nav className="flex md:hidden items-center justify-around h-20 text-blue-100 mix-blend-difference font-semibold fixed w-full z-20 bg-transparent backdrop-blur-[6px] shadow-lg">
