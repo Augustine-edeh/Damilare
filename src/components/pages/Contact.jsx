@@ -1,4 +1,5 @@
-import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useState, useRef } from "react";
 import Card from "../ui/Card";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,12 +16,33 @@ const Contact = () => {
     console.log(e.target.value);
   };
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_ktalycl", "template_dfxjcmr", form.current, {
+        publicKey: "e1F5G0lLl-sSmRvXt",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   const submitHandler = (e) => {
+    sendEmail();
     toast("Message sent succcessfully!");
     setFormInputsValues({ name: "", email: "", message: "" });
 
     e.preventDefault();
   };
+
   return (
     <div
       id="contact"
@@ -34,7 +56,7 @@ const Contact = () => {
           (Drop me a line and I'll be sure to holla right back at you soon. 😉)
         </h1>
         <Card>
-          <form onSubmit={submitHandler}>
+          <form ref={form} onSubmit={sendEmail}>
             <ToastContainer />
             <div className="mb-4">
               <label
@@ -45,9 +67,10 @@ const Contact = () => {
               </label>
               <input
                 type="text"
-                id="name"
-                value={formInputsValues.name}
-                onChange={changeHandler}
+                id="user_name"
+                name="user_name"
+                // value={formInputsValues.name}
+                // onChange={changeHandler}
                 required
                 className="w-full border text-black border-gray-300 rounded-md p-3 focus:bg-indigo-50 focus:outline-none focus:border-blue-500 transition duration-300"
               />
@@ -61,9 +84,10 @@ const Contact = () => {
               </label>
               <input
                 type="email"
-                id="email"
-                value={formInputsValues.email}
-                onChange={changeHandler}
+                id="user_email"
+                name="user_email"
+                // value={formInputsValues.email}
+                // onChange={changeHandler}
                 required
                 className="w-full border text-black border-gray-300 rounded-md p-3 focus:bg-indigo-50 focus:outline-none focus:border-blue-500 transition duration-300"
               />
@@ -77,8 +101,9 @@ const Contact = () => {
               </label>
               <textarea
                 id="message"
-                value={formInputsValues.message}
-                onChange={changeHandler}
+                name="message"
+                // value={formInputsValues.message}
+                // onChange={changeHandler}
                 rows="4"
                 required
                 className="w-full border text-black border-gray-300 rounded-md p-3 focus:bg-indigo-50 focus:outline-none focus:border-blue-500 transition duration-300"
