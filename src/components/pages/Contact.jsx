@@ -5,6 +5,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const [isSending, SetIsSending] = useState(false);
+
   let [formInputsValues, setFormInputsValues] = useState({
     name: "",
     email: "",
@@ -20,16 +22,18 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    SetIsSending(true);
     emailjs
       .sendForm("service_ktalycl", "template_dfxjcmr", form.current, {
         publicKey: "e1F5G0lLl-sSmRvXt",
       })
       .then(
         () => {
+          SetIsSending(false);
           console.log("SUCCESS!");
         },
         (error) => {
+          SetIsSending(false);
           console.log("FAILED...", error.text);
         }
       );
@@ -112,9 +116,10 @@ const Contact = () => {
             <div className="text-center">
               <button
                 type="submit"
+                id="submit-btn"
                 className="bg-gray-800 text-white py-2 px-4 rounded-md transition duration-300 transform hover:scale-105"
               >
-                Send Message
+                {isSending ? "Sending..." : "Send Message"}
               </button>
             </div>
           </form>
