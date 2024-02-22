@@ -1,30 +1,11 @@
 import emailjs from "@emailjs/browser";
-import { Spinner } from "flowbite-react";
 import { useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SendMessageBotton from "./SendMessageButton";
+import SpinnerLoader from "./SpinnerLoader";
 
 const ContactForm = () => {
-  const IsSendingMessageUI = () => (
-    <button
-      type="button"
-      className="flex gap-x-3 bg-gray-800 text-white py-2 px-4 rounded-md opacity-80"
-    >
-      <Spinner size="md" className="animate-spin fill-blue-100" />
-      <span className="">Sending...</span>
-    </button>
-  );
-
-  const SendMessageBotton = () => (
-    <button
-      type="submit"
-      id="submit-btn"
-      className="bg-gray-800 text-white py-2 px-4 rounded-md transition duration-300 transform hover:scale-105"
-    >
-      <span className="pl-3">Send Message</span>
-    </button>
-  );
-
   const [isSending, SetIsSending] = useState(false);
 
   // form inputs refs
@@ -130,7 +111,7 @@ const ContactForm = () => {
         ></textarea>
       </div>
       <div className="flex justify-center">
-        {isSending ? <IsSendingMessageUI /> : <SendMessageBotton />}
+        {isSending ? <SpinnerLoader /> : <SendMessageBotton />}
       </div>
     </form>
   );
