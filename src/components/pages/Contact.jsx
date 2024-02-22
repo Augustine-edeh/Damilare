@@ -28,16 +28,68 @@ const Contact = () => {
     </button>
   );
 
-  let [formInputsValues, setFormInputsValues] = useState({
+  // form inputs refs
+  const nameInputRef = useRef(null);
+  const emailInputRef = useRef(null);
+  const messageInputRef = useRef(null);
+
+  const [formInputsValues, setFormInputsValues] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const changeHandler = (e) => {
-    setFormInputsValues(e.target.value);
-    console.log(e.target.value);
+  const changeHandler = () => {
+    // Update formInputsValues using refs
+    setFormInputsValues({
+      name: nameInputRef.current.value,
+      email: emailInputRef.current.value,
+      message: messageInputRef.current.value,
+    });
   };
+
+  // const submitHandler = (e) => {
+  //   e.preventDefault();
+  //   // Here you can do whatever you want with the form inputs, like sending them to an API
+  //   console.log("Form submitted with values:", formInputsValues);
+
+  //   // Reset form input values to blank
+  //   setFormInputsValues({
+  //     name: "",
+  //     email: "",
+  //     message: "",
+  //   });
+  // };
+
+  // return (
+  //   <form onSubmit={submitHandler}>
+  //     <input
+  //       type="text"
+  //       name="name"
+  //       value={formInputsValues.name}
+  //       onChange={changeHandler}
+  //       placeholder="Name"
+  //     />
+  //     <br />
+  //     <input
+  //       type="email"
+  //       name="email"
+  //       value={formInputsValues.email}
+  //       onChange={changeHandler}
+  //       placeholder="Email"
+  //     />
+  //     <br />
+  //     <textarea
+  //       name="message"
+  //       value={formInputsValues.message}
+  //       onChange={changeHandler}
+  //       placeholder="Message"
+  //     ></textarea>
+  //     <br />
+  //     <button type="submit">Submit</button>
+  //   </form>
+  // );
+  // };
 
   const form = useRef();
 
@@ -51,7 +103,14 @@ const Contact = () => {
       .then(
         () => {
           SetIsSending(false);
-          setFormInputsValues({ name: "", email: "", message: "" });
+          // setFormInputsValues({ name: "", email: "", message: "" });
+
+          // Reset form input values to blank
+          setFormInputsValues({
+            name: "",
+            email: "",
+            message: "",
+          });
           toast("Message sent succcessfully!");
           console.log("MESSAGE SENT!");
         },
@@ -63,12 +122,7 @@ const Contact = () => {
   };
 
   const submitHandler = (e) => {
-    e.preventDefault();
     sendEmail(e);
-    // toast("Message sent succcessfully!");
-    // setFormInputsValues({ name: "", email: "", message: "" });
-
-    // e.preventDefault();
   };
 
   return (
@@ -98,6 +152,7 @@ const Contact = () => {
                 id="user_name"
                 name="user_name"
                 value={formInputsValues.name}
+                ref={nameInputRef}
                 onChange={changeHandler}
                 required
                 className="w-full border text-black border-gray-300 rounded-md p-3 focus:bg-indigo-50 focus:outline-none focus:border-blue-500 transition duration-300"
@@ -115,6 +170,7 @@ const Contact = () => {
                 id="user_email"
                 name="user_email"
                 value={formInputsValues.email}
+                ref={emailInputRef}
                 onChange={changeHandler}
                 required
                 className="w-full border text-black border-gray-300 rounded-md p-3 focus:bg-indigo-50 focus:outline-none focus:border-blue-500 transition duration-300"
@@ -131,6 +187,7 @@ const Contact = () => {
                 id="message"
                 name="message"
                 value={formInputsValues.message}
+                ref={messageInputRef}
                 onChange={changeHandler}
                 rows="4"
                 required
