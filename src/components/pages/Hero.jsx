@@ -39,15 +39,27 @@ const HeroSection = () => {
         </section>
 
         <section className="z-10 grid place-content-center px-10">
-          <motion.h2
+          <motion.div
             className="text-left text-2xl"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ ease: "easeOut", duration: 1 }}
           >
-            Hi there! 👋,
-          </motion.h2>
-          <p className="text-xl line leading-relaxed">I'm</p>
+            <motion.h2
+              initial={{ y: -10 }}
+              animate={{ y: 10 }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "reverse",
+                duration: 1.5,
+                delay: 3.5,
+                ease: "easeInOut",
+              }}
+            >
+              Hi there! 👋,
+            </motion.h2>
+          </motion.div>
+          <p className="text-xl line leading-relaxed mt-5">I'm</p>
           <h1 className="text-[3rem] text-center">Oluwadamilare Adamolekun</h1>
           <motion.p
             initial={{ x: -1000, opacity: 0 }}
