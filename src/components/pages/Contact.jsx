@@ -52,21 +52,23 @@ const Contact = () => {
         () => {
           SetIsSending(false);
           setFormInputsValues({ name: "", email: "", message: "" });
-          console.log("SUCCESS!");
+          toast("Message sent succcessfully!");
+          console.log("MESSAGE SENT!");
         },
         (error) => {
           SetIsSending(false);
-          console.log("FAILED...", error.text);
+          console.log("FAILED TO SEND MESSAGE...", error.text);
         }
       );
   };
 
   const submitHandler = (e) => {
-    sendEmail();
-    toast("Message sent succcessfully!");
-    setFormInputsValues({ name: "", email: "", message: "" });
-
     e.preventDefault();
+    sendEmail(e);
+    // toast("Message sent succcessfully!");
+    // setFormInputsValues({ name: "", email: "", message: "" });
+
+    // e.preventDefault();
   };
 
   return (
@@ -82,7 +84,7 @@ const Contact = () => {
           (Drop me a line and I'll be sure to holla right back at you soon. 😉)
         </h1>
         <Card>
-          <form ref={form} onSubmit={sendEmail}>
+          <form ref={form} onSubmit={submitHandler}>
             <ToastContainer />
             <div className="mb-4">
               <label
