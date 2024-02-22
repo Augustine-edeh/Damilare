@@ -51,6 +51,7 @@ const Contact = () => {
       .then(
         () => {
           SetIsSending(false);
+          setFormInputsValues({ name: "", email: "", message: "" });
           console.log("SUCCESS!");
         },
         (error) => {
@@ -94,8 +95,8 @@ const Contact = () => {
                 type="text"
                 id="user_name"
                 name="user_name"
-                // value={formInputsValues.name}
-                // onChange={changeHandler}
+                value={formInputsValues.name}
+                onChange={changeHandler}
                 required
                 className="w-full border text-black border-gray-300 rounded-md p-3 focus:bg-indigo-50 focus:outline-none focus:border-blue-500 transition duration-300"
               />
@@ -111,8 +112,8 @@ const Contact = () => {
                 type="email"
                 id="user_email"
                 name="user_email"
-                // value={formInputsValues.email}
-                // onChange={changeHandler}
+                value={formInputsValues.email}
+                onChange={changeHandler}
                 required
                 className="w-full border text-black border-gray-300 rounded-md p-3 focus:bg-indigo-50 focus:outline-none focus:border-blue-500 transition duration-300"
               />
@@ -127,8 +128,8 @@ const Contact = () => {
               <textarea
                 id="message"
                 name="message"
-                // value={formInputsValues.message}
-                // onChange={changeHandler}
+                value={formInputsValues.message}
+                onChange={changeHandler}
                 rows="4"
                 required
                 className="w-full border text-black border-gray-300 rounded-md p-3 focus:bg-indigo-50 focus:outline-none focus:border-blue-500 transition duration-300"
