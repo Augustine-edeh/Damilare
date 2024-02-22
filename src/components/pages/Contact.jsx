@@ -48,49 +48,6 @@ const Contact = () => {
     });
   };
 
-  // const submitHandler = (e) => {
-  //   e.preventDefault();
-  //   // Here you can do whatever you want with the form inputs, like sending them to an API
-  //   console.log("Form submitted with values:", formInputsValues);
-
-  //   // Reset form input values to blank
-  //   setFormInputsValues({
-  //     name: "",
-  //     email: "",
-  //     message: "",
-  //   });
-  // };
-
-  // return (
-  //   <form onSubmit={submitHandler}>
-  //     <input
-  //       type="text"
-  //       name="name"
-  //       value={formInputsValues.name}
-  //       onChange={changeHandler}
-  //       placeholder="Name"
-  //     />
-  //     <br />
-  //     <input
-  //       type="email"
-  //       name="email"
-  //       value={formInputsValues.email}
-  //       onChange={changeHandler}
-  //       placeholder="Email"
-  //     />
-  //     <br />
-  //     <textarea
-  //       name="message"
-  //       value={formInputsValues.message}
-  //       onChange={changeHandler}
-  //       placeholder="Message"
-  //     ></textarea>
-  //     <br />
-  //     <button type="submit">Submit</button>
-  //   </form>
-  // );
-  // };
-
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -103,7 +60,6 @@ const Contact = () => {
       .then(
         () => {
           SetIsSending(false);
-          // setFormInputsValues({ name: "", email: "", message: "" });
 
           // Reset form input values to blank
           setFormInputsValues({
@@ -111,6 +67,8 @@ const Contact = () => {
             email: "",
             message: "",
           });
+
+          // trigger toast notification
           toast("Message sent succcessfully!");
           console.log("MESSAGE SENT!");
         },
