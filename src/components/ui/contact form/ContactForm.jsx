@@ -48,12 +48,14 @@ const ContactForm = () => {
             message: "",
           });
 
-          // trigger toast notification
-          toast("Message sent succcessfully!");
+          // trigger toast-success notification
+          toast.success("Message sent succcessfully!");
           console.log("MESSAGE SENT!");
         },
         (error) => {
           SetIsSending(false);
+          // trigger toast-error notification
+          toast.error("Failed! Message not sent, Please try again.");
           console.log("FAILED TO SEND MESSAGE...", error.text);
         }
       );
