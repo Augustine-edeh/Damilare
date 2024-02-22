@@ -8,6 +8,9 @@ import SpinnerLoader from "./SpinnerLoader";
 const ContactForm = () => {
   const [isSending, SetIsSending] = useState(false);
 
+  //   form ref
+  const form = useRef();
+
   // form inputs refs
   const nameInputRef = useRef(null);
   const emailInputRef = useRef(null);
@@ -28,11 +31,8 @@ const ContactForm = () => {
     });
   };
 
-  const form = useRef();
-
   const sendEmail = (e) => {
     e.preventDefault();
-    SetIsSending(true);
     emailjs
       .sendForm("service_ktalycl", "template_dfxjcmr", form.current, {
         publicKey: "e1F5G0lLl-sSmRvXt",
@@ -60,14 +60,18 @@ const ContactForm = () => {
   };
 
   const submitHandler = (e) => {
+    SetIsSending(true);
     sendEmail(e);
   };
   return (
     <form ref={form} onSubmit={submitHandler}>
       <ToastContainer />
       <div className="mb-4">
-        <label htmlFor="name" className="block text-gray-700 text-lg mb-2">
-          Your Name
+        <label
+          htmlFor="user_name"
+          className="inline-block text-gray-700 font-semibold text-lg mb-2"
+        >
+          Name
         </label>
         <input
           type="text"
@@ -78,11 +82,15 @@ const ContactForm = () => {
           onChange={changeHandler}
           required
           className="w-full border text-black border-gray-300 rounded-md p-3 focus:bg-indigo-50 focus:outline-none focus:border-blue-500 transition duration-300"
+          placeholder="Enter your name"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="email" className="block text-gray-700 text-lg mb-2">
-          Your Email
+        <label
+          htmlFor="user_email"
+          className="inline-block text-gray-700 font-semibold text-lg mb-2"
+        >
+          Email
         </label>
         <input
           type="email"
@@ -93,11 +101,15 @@ const ContactForm = () => {
           onChange={changeHandler}
           required
           className="w-full border text-black border-gray-300 rounded-md p-3 focus:bg-indigo-50 focus:outline-none focus:border-blue-500 transition duration-300"
+          placeholder="Enter your email"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="message" className="block text-gray-700 text-lg mb-2">
-          Your Message
+        <label
+          htmlFor="message"
+          className="inline-block text-gray-700 font-semibold text-lg mb-2"
+        >
+          Message
         </label>
         <textarea
           id="message"
@@ -108,6 +120,7 @@ const ContactForm = () => {
           rows="4"
           required
           className="w-full border text-black border-gray-300 rounded-md p-3 focus:bg-indigo-50 focus:outline-none focus:border-blue-500 transition duration-300"
+          placeholder="Enter your message"
         ></textarea>
       </div>
       <div className="flex justify-center">
