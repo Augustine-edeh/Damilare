@@ -20,7 +20,7 @@ const AboutPage = () => {
               Dammy!
             </p>
             <Paragraph>
-              I'm a 7-year-old dynamo hailing from the bustling city of Lagos,
+              I'm an 8-year-old champ hailing from the bustling city of Lagos,
               Nigeria.
             </Paragraph>
             <Paragraph>
@@ -35,18 +35,42 @@ const AboutPage = () => {
           </h2>
           <div className="text-lg text-gray-700">
             <p>
-              I'm a gaming guru! From scoring goals in FIFA to cruising through
-              the streets in GTA, I'm always up for some console action.
+              Console time is always fun for me! From scoring goals in FIFA to
+              cruising through the streets in GTA, to conquering dreaded
+              opponent in the almighty `God of war`. I'm always up for some
+              console action.
             </p>
             <Paragraph>
               But hey, life isn't all about gaming! I also enjoy diving into my
               school homework and exploring the wonders of the internet for the
-              coolest cartoons and animations.
+              coolest educational videos and animations.
             </Paragraph>
             <Paragraph>
               So whether I'm leveling up in a game or expanding my knowledge
               online, you can bet I'm always up to something exciting!
             </Paragraph>
+          </div>
+        </Card>
+        <Card>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            Running for Assembly Prefect
+          </h2>
+          <p className="text-lg text-gray-700 mb-4">
+            🎉 Exciting news! I'm on a mission to bring fun and leadership to
+            Acron Shield Foundation School as I run for Assembly Prefect! 🌟 My
+            vision is to create an amazing school environment where every voice
+            is heard, and together, we can achieve great things! So dear Friends
+            and Colleagues at school, when the day comes to cast your vote, do
+            well to cast it for Oluwadamilare Adamolekun!
+          </p>
+          <p>Checkout banner below for a glimpse of my manifesto...</p>
+          <img
+            src="/public/Campaign-poster-1.png"
+            alt="Campaign Poster"
+            className="my-4 w-full h-auto"
+          />
+          <div className="text-lg text-gray-700">
+            {/* Insert the campaign speech here */}
           </div>
         </Card>
         <Card>
