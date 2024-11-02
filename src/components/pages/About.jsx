@@ -65,7 +65,7 @@ const AboutPage = () => {
           </p>
           <p>Checkout banner below for a glimpse of my manifesto...</p>
           <img
-            src="/public/Campaign-poster-1.png"
+            src="/Campaign-poster-1.png"
             alt="Campaign Poster"
             className="my-4 w-full h-auto"
           />
