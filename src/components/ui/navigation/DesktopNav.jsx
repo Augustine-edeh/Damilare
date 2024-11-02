@@ -1,6 +1,6 @@
 const DesktopNav = () => {
   return (
-    <nav className="hidden md:flex items-center justify-around h-20 text-blue-100  mix-blend-difference	 font-semibold fixed w-full z-20 bg-transparent backdrop-blur-[6px] shadow-lg">
+    <nav className="hidden md:flex items-center justify-around h-20 text-red-100  mix-blend-difference	 font-semibold fixed w-full z-20 bg-transparent backdrop-blur-[6px] shadow-lg">
       <p className="text-3xl cursor-default">Portfolio</p>
       <ul className="flex gap-10 text-2xl">
         <li>
