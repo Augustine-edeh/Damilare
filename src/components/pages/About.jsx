@@ -20,7 +20,7 @@ const AboutPage = () => {
               Dammy!
             </p>
             <Paragraph>
-              I'm a 7-year-old dynamo hailing from the bustling city of Lagos,
+              I'm an 8-year-old champ hailing from the bustling city of Lagos,
               Nigeria.
             </Paragraph>
             <Paragraph>
@@ -35,13 +35,15 @@ const AboutPage = () => {
           </h2>
           <div className="text-lg text-gray-700">
             <p>
-              I'm a gaming guru! From scoring goals in FIFA to cruising through
-              the streets in GTA, I'm always up for some console action.
+              Console time is always fun for me! From scoring goals in FIFA to
+              cruising through the streets in GTA, to conquering dreaded
+              opponent in the almighty `God of war`. I'm always up for some
+              console action.
             </p>
             <Paragraph>
               But hey, life isn't all about gaming! I also enjoy diving into my
               school homework and exploring the wonders of the internet for the
-              coolest cartoons and animations.
+              coolest educational videos and animations.
             </Paragraph>
             <Paragraph>
               So whether I'm leveling up in a game or expanding my knowledge
