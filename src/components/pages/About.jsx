@@ -57,18 +57,17 @@ const AboutPage = () => {
           </h2>
           <p className="text-lg text-gray-700 mb-4">
             🎉 Exciting news! I'm on a mission to bring fun and leadership to
-            Acron Shield Foundation School as I run for post of Assembly
-            Prefect! 🌟 My vision is to create an amazing school environment
-            where every voice is heard, and together, we can achieve great
-            things! So dear Friends and Colleagues at school, when the day comes
-            to cast your vote, do well to cast them for Oluwadamilare
-            Adamolekun.
+            Acron Shield Foundation School as I run for Assembly Prefect! 🌟 My
+            vision is to create an amazing school environment where every voice
+            is heard, and together, we can achieve great things! So dear Friends
+            and Colleagues at school, when the day comes to cast your vote, do
+            well to cast it for Oluwadamilare Adamolekun!
           </p>
-          <p>Checkout my banner below for a glimpse of my manifesto</p>
+          <p>Checkout banner below for a glimpse of my manifesto...</p>
           <img
             src="/public/Campaign-poster-1.png"
             alt="Campaign Poster"
-            className="mb-4 w-full h-auto"
+            className="my-4 w-full h-auto"
           />
           <div className="text-lg text-gray-700">
             {/* Insert the campaign speech here */}
